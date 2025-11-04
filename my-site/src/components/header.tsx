@@ -13,11 +13,13 @@ const Header: React.FC = () => {
         "Full-Stack Developer"
     ];
 
-    const rowH: number = 50;
+    const rowH: number = 55;
     const REPEATS: number = 3;
 
     return (
         <header
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
         style={
             { 
                 textAlign: "center", 
@@ -45,14 +47,13 @@ const Header: React.FC = () => {
                 {
                     { 
                         height: rowH, 
+                        marginBottom: "5px",
                         position: "relative", 
                         overflow: "visible" 
                     }
                 }
                 >
                     <div
-                        onMouseEnter={() => setHovered(true)}
-                        onMouseLeave={() => setHovered(false)}
                         style={
                             {
                                 position: "absolute",
@@ -61,10 +62,10 @@ const Header: React.FC = () => {
                                 fontSize: text === "Dalton Shults" ? 56 : 36,
                                 fontWeight: "bold",
                                 whiteSpace: "nowrap",
-                                transform: "rotate(13deg)",
+                                transform: hovered ? "rotate(0deg)" : "rotate(13deg)",
                                 transformOrigin: "left center",
-                                color: hovered ? "rgb(150,150, 150)" : "rgb(0, 0, 0)",
-                                transition: "color 0.3s ease",
+                                color: hovered ?  text != "Dalton Shults" ? "rgb(150,150, 150)" : "rgb(0, 0, 0)": "rgb(0, 0, 0)",
+                                transition: "color 0.3s ease, transform 0.5s ease",
                             }
                         }
                     >
