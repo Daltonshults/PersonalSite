@@ -59,13 +59,13 @@ const Header: React.FC = () => {
                                 position: "absolute",
                                 left: -50,
                                 top: -350,
-                                fontSize: text === "Dalton Shults" ? 56 : 36,
+                                fontSize: text === "Dalton Shults" ? hovered ? 72 : 56 : 36,
                                 fontWeight: "bold",
                                 whiteSpace: "nowrap",
                                 transform: hovered ? "rotate(0deg)" : "rotate(13deg)",
                                 transformOrigin: "left center",
                                 color: hovered ?  text != "Dalton Shults" ? "rgb(150,150, 150)" : "rgb(0, 0, 0)": "rgb(0, 0, 0)",
-                                transition: "color 0.3s ease, transform 0.5s ease",
+                                transition: "color 0.3s ease, transform 0.5s ease, font-size 0.5s ease",
                             }
                         }
                     >
