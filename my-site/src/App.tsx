@@ -3,6 +3,7 @@ import React from 'react'
 
 import Header from './components/header'
 import AboutMe from './components/aboutme'
+import MainBody from './components/mainBody'
 
 import './App.css'
 
@@ -12,6 +13,7 @@ function App() {
     <>
       <Header />
       <AboutMe />
+      <MainBody />
   
     </>
   )
