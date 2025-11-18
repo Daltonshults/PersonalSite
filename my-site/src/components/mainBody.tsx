@@ -37,7 +37,7 @@ const MainBody: React.FC = () => {
 
   const goNext = () => {
     setDirection(1);
-    setPage((prev) => (prev === pages.length - 1 ? 0 : prev + 1));
+    setPage((next) => (next === pages.length - 1 ? 0 : next + 1));
   };
 
   return (
