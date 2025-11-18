@@ -24,9 +24,44 @@ const Footer: React.FC = () => {
                     width: "100%"
                 }}
             >
-                <h1>Hello World!</h1>
-                <h1>Hello World!</h1>
-                <h1>Hello World!</h1>
+                <div
+                    style={
+                        {
+                            display: "flex",
+                            flexDirection: "column"
+                        }
+                    }
+                >
+                    <h1>Hello World!</h1>
+                    <h1>Hello World!</h1>
+                    <h1>Hello World!</h1>
+                </div>
+
+                                <div
+                    style={
+                        {
+                            display: "flex",
+                            flexDirection: "column"
+                        }
+                    }
+                >
+                    <h1>Hello World!</h1>
+                    <h1>Hello World!</h1>
+                    <h1>Hello World!</h1>
+                </div>
+
+                                <div
+                    style={
+                        {
+                            display: "flex",
+                            flexDirection: "column"
+                        }
+                    }
+                >
+                    <h1>Hello World!</h1>
+                    <h1>Hello World!</h1>
+                    <h1>Hello World!</h1>
+                </div>
             </div>
         </div>
     )
