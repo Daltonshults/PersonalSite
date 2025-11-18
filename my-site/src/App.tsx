@@ -6,6 +6,7 @@ import AboutMe from './components/aboutme'
 import MainBody from './components/mainBody'
 
 import './App.css'
+import Footer from './components/footer'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <AboutMe />
       <MainBody />
+      <Footer/>
   
     </>
   )
