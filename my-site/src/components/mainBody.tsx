@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import ComponentOne from "./compOne";
 import ComponentTwo from "./compTwo";
 import ComponentThree from "./compThree";
-
+// TODO: Add text from resume
 const variants = {
   enter: (direction: number) => ({
     x: direction > 0 ? 300 : -300,
