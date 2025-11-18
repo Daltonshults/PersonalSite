@@ -6,14 +6,28 @@ const Footer: React.FC = () => {
         <div
             style={
                 {
+                    padding: "5rem",
                     height: "20rem",
                     display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "center",
+                    alignItems: "center"
                 }
             }
         >
-            <h1>Hello World!</h1>
+            <div
+                style={{
+                    padding: "5rem",
+                    height: "20rem",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    width: "100%"
+                }}
+            >
+                <h1>Hello World!</h1>
+                <h1>Hello World!</h1>
+                <h1>Hello World!</h1>
+            </div>
         </div>
     )
 };
