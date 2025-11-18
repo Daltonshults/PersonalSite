@@ -41,22 +41,24 @@ const MainBody: React.FC = () => {
 
   type indicatorDotProps = {
     color?: string
+    page: number
   };
 
-  const IndicatorDot = (  { color }: indicatorDotProps  ) => {
-    return (
-        <div
-        style={
-            {
-                color: color,
-                fontSize: "10rem"
-            }
-        }
-        >
-            .
-        </div>
-    )
-  };
+  const IndicatorDot = ({ color = "lightgray", page }: indicatorDotProps) => {
+        return (
+            <div
+            onClick={() => setPage(page)}
+            style={{
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                backgroundColor: color,
+                margin: "0 6px",
+                cursor: "pointer",
+            }}
+            />
+        );
+    };
 
   type IndicatorProps = {
 
@@ -72,12 +74,12 @@ const MainBody: React.FC = () => {
         if ( page === i )
         {
             dots.push(
-                <IndicatorDot color="black"/>
+                <IndicatorDot color="black" page={i}/>
             );
         }
         else {
             dots.push(
-                <IndicatorDot color="lightgray"/>
+                <IndicatorDot color="lightgray" page={i}/>
             );
         }
     };
