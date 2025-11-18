@@ -55,6 +55,7 @@ const MainBody: React.FC = () => {
                 backgroundColor: color,
                 margin: "0 6px",
                 cursor: "pointer",
+                opacity: "60%"
             }}
             />
         );
@@ -79,7 +80,7 @@ const MainBody: React.FC = () => {
         }
         else {
             dots.push(
-                <IndicatorDot color="lightgray" page={i}/>
+                <IndicatorDot color="darkgray" page={i}/>
             );
         }
     };
