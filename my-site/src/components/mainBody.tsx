@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import ComponentOne from "./compOne";
 import ComponentTwo from "./compTwo";
 import ComponentThree from "./compThree";
-import { div } from "framer-motion/client";
 
 const variants = {
   enter: (direction: number) => ({
@@ -38,6 +37,63 @@ const MainBody: React.FC = () => {
   const goNext = () => {
     setDirection(1);
     setPage((next) => (next === pages.length - 1 ? 0 : next + 1));
+  };
+
+  type indicatorDotProps = {
+    color?: string
+  };
+
+  const IndicatorDot = (  { color }: indicatorDotProps  ) => {
+    return (
+        <div
+        style={
+            {
+                color: color,
+                fontSize: "10rem"
+            }
+        }
+        >
+            .
+        </div>
+    )
+  };
+
+  type IndicatorProps = {
+
+    page?: number
+
+  }
+
+  const Indicator = ( { page }: IndicatorProps ) => {
+
+    const dots = [];
+
+    for (let i: number = 0; i < pages.length; i++ ) {
+        if ( page === i )
+        {
+            dots.push(
+                <IndicatorDot color="black"/>
+            );
+        }
+        else {
+            dots.push(
+                <IndicatorDot color="lightgray"/>
+            );
+        }
+    };
+
+    return (
+        <div
+            style={
+                {
+                    display: "flex",
+                    flexDirection: "row",
+                    alignContent: "center",
+                    justifyContent: "center",
+                }
+            }
+        >{dots}</div>
+    )
   };
 
   return (
@@ -75,6 +131,9 @@ const MainBody: React.FC = () => {
         </AnimatePresence>
         </div>
     </div>
+    <div>
+        <Indicator page={page}/>
+    </div>
     <div
     style={
         {
@@ -87,6 +146,8 @@ const MainBody: React.FC = () => {
         <button 
         style={
             {
+                margin: ".25rem",
+                padding: ".25rem",
                 fontSize: "24px"
             }
         }
@@ -94,6 +155,8 @@ const MainBody: React.FC = () => {
         <button 
         style={
             {
+                margin: ".25rem",
+                padding: ".25rem",
                 fontSize: "24px"
             }
         }
