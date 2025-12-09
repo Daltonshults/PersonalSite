@@ -40,6 +40,39 @@ export const resumeData = {
         "Designed comprehensive answer sheets for weekly homework assignments, ensuring clarity and alignment with course objectives.",
         "Aided in teaching core topics including Moore’s Law, hyperthreading, caching issues and false sharing, data and functional decomposition, SIMD, GPU computing, interoperability, MPI, and high-performance computing using an Nvidia DGX-2."
       ]
+    },
+    {
+        title: "LAYMAN RESEARCH PROJECT| OREGON STATE UNIVERSITY-CASCADES| JANUARY 2022 – JUNE 2022",
+        description:[
+            "Collaborated on a research project funded by Doug Layman and supported by Oregon State University.",
+            "Autonomously directing the project with guidance from Professor Patrick Donnelly to achieve successful outcomes.",
+            "Designed a machine learning pipeline to extract features from songs, including tempo, beats, and duration, generating a tempogram to identify breakpoints using the Python ruptures library.",
+            "Spearheaded the creation of design documents, providing detailed technical guidance to the project team and enabling a seamless research process.",
+            "Applied a Constant-Q Transform (CQT) library to build a recurrence matrix, enabling K-means clustering for segments.",
+            "Pioneered a collaborative effort with a small, agile team to handle all project elements, encompassing comprehensive documentation for front-end and back-end development."
+        ]
     }
-  ]
+  ],
+  langtech: [
+        "Python 3",
+        "Java",
+        "JavaScript",
+        "Docker",
+        "C/C++/CUDA/POSIX",
+        "OpenCL/OpenGL",
+        "React",
+        "SQL/PostgreSQL",
+        "Git/GitHub",
+        "BASH Scripting",
+        "Flutter",
+        "Express/Node.JS",
+        "Django",
+        "TensorFlow",
+        "Pandas",
+        "SciKit-Learn",
+        "Linux",
+        "Android",
+        "iOS",
+        "MacOS"
+    ]
 };
