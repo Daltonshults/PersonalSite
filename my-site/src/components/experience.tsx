@@ -37,7 +37,7 @@ const Experience: React.FC = () => {
         return (
             <div>
                 { experience.map( (exp, i) =>(
-                    <ExperienceItem title={exp.title} description={exp.description}/>
+                    <ExperienceItem key={i} title={exp.title} description={exp.description}/>
                 ))}
             </div>
         )
@@ -48,7 +48,9 @@ const Experience: React.FC = () => {
         style={
             {
                 display: "flex",
-                flexDirection: "column"
+                flexDirection: "column",
+                height: "100%",
+                margin: "2.5rem 5rem 2.5rem 5rem"
             }
         }
     >
