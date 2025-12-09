@@ -2,6 +2,7 @@ import React from 'react';
 import LargeText from './largeText';
 import SmallText from './smallText';
 import SubHeader from './resumeSubHeader';
+import ResumeHeader from './resumeHeader';
 
 const Experience: React.FC = () => {
     return (
@@ -13,15 +14,8 @@ const Experience: React.FC = () => {
             }
         }
     >
-    <LargeText
-        style={
-            {
-                justifySelf: "center",
-                alignSelf: "center"
-            }
-        }
-    >Experience</LargeText>
-    <SubHeader>Freelance Full-stack Development | January 2025-Present</SubHeader>
+        <ResumeHeader>Experience</ResumeHeader>
+        <SubHeader>Freelance Full-stack Development | January 2025-Present</SubHeader>
 
 
     </div>
