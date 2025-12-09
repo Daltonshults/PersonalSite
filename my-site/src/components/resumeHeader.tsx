@@ -1,13 +1,25 @@
 import React from "react";
 import LargeText from "./largeText";
 
-/*
-    <LargeText
-        style={
-            {
-                justifySelf: "center",
-                alignSelf: "center"
+
+type ResumeHeaderProps = {
+    children: React.ReactNode
+    style?: React.CSSProperties
+}
+
+const ResumeHeader: React.FC<ResumeHeaderProps> = ( {children, style} ) => {
+    return (
+        <LargeText 
+            style = {
+                {
+                    justifySelf: "center",
+                    alignSelf: "center",
+                    margin: "5rem",
+                    ...style
+                }
             }
-        }
-    >Experience</LargeText>
-*/
+            >{children}</LargeText>
+    )
+}
+
+export default ResumeHeader;
