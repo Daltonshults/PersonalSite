@@ -21,7 +21,8 @@ const Footer: React.FC = () => {
                     flexDirection: "row",
                     justifyContent: "space-between",
                     alignItems: "center",
-                    width: "100%"
+                    width: "100%",
+                    backgroundColor: "lightgray"
                 }}
             >
                 <div
