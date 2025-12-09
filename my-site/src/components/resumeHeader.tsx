@@ -14,7 +14,7 @@ const ResumeHeader: React.FC<ResumeHeaderProps> = ( {children, style} ) => {
                 {
                     justifySelf: "center",
                     alignSelf: "center",
-                    margin: "5rem",
+                    margin: "5rem 0rem 2.5rem 0rem",
                     ...style
                 }
             }
