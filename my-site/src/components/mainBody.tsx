@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import ComponentOne from "./compOne";
+import Experience from "./experience";
 import ComponentTwo from "./compTwo";
 import ComponentThree from "./compThree";
 // TODO: Add text from resume
@@ -42,11 +42,13 @@ const MainBody: React.FC = () => {
   type indicatorDotProps = {
     color?: string
     page: number
+    index: number
   };
 
-  const IndicatorDot = ({ color = "lightgray", page }: indicatorDotProps) => {
+  const IndicatorDot = ({ color = "lightgray", page, index }: indicatorDotProps) => {
         return (
             <div
+            key={index}
             onClick={() => setPage(page)}
             style={{
                 width: "12px",
@@ -64,6 +66,7 @@ const MainBody: React.FC = () => {
   type IndicatorProps = {
 
     page?: number
+    index?: number
 
   }
 
@@ -75,12 +78,12 @@ const MainBody: React.FC = () => {
         if ( page === i )
         {
             dots.push(
-                <IndicatorDot color="black" page={i}/>
+                <IndicatorDot color="black" page={i} index={i} key={i}/>
             );
         }
         else {
             dots.push(
-                <IndicatorDot color="darkgray" page={i}/>
+                <IndicatorDot color="darkgray" page={i} index={i} key={i}/>
             );
         }
     };
@@ -124,7 +127,7 @@ const MainBody: React.FC = () => {
             transition={{ duration: 0.3 }}
             >
             {page === 0 ? (
-                <ComponentOne />
+                <Experience />
             ) : page === 1 ? (
                 <ComponentTwo />
             ) : (
@@ -135,7 +138,7 @@ const MainBody: React.FC = () => {
         </div>
     </div>
     <div>
-        <Indicator page={page}/>
+        <Indicator page={page} index={page}/>
     </div>
     <div
     style={
