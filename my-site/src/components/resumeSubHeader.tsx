@@ -11,7 +11,7 @@ const SubHeader: React.FC<SubHeaderProps> = ({ children, style }) => {
         <MediumText
             style={
                 {
-                    margin: "5rem",
+                    margin: "2.5rem 5rem 0rem 5rem",
                     ...style
                 }
             }
