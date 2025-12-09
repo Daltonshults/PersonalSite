@@ -6,11 +6,14 @@ type LargeTextProps=
     style?: React.CSSProperties;
 }
 
-const LargeText: React.FC<LargeTextProps> = ( { children, style={fontSize: "47px", fontWeight: "bolder"} }) => {
+const LargeText: React.FC<LargeTextProps> = ( { children, style }) => {
     return (
     <div
-    style={
-        style
+    style={ {
+        fontSize: "47px",
+        fontWeight: "bolder",
+        ...style
+        }
     }
     >
         {children}
