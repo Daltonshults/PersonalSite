@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Experience from "./experience";
-import ComponentTwo from "./compTwo";
+import LanguagesTechnologies from "./languagesTechnologies";
 import ComponentThree from "./compThree";
 // TODO: Add text from resume
 const variants = {
@@ -115,7 +115,7 @@ const MainBody: React.FC = () => {
             minHeight: "500px"
         }}
         >
-        <div style={{ position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "relative", overflow: "scroll", height: "50rem" }}>
         <AnimatePresence mode="wait" custom={direction}>
             <motion.div
             key={page}
@@ -129,7 +129,7 @@ const MainBody: React.FC = () => {
             {page === 0 ? (
                 <Experience />
             ) : page === 1 ? (
-                <ComponentTwo />
+                <LanguagesTechnologies />
             ) : (
                 <ComponentThree />
             )}
