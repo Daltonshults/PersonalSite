@@ -1,6 +1,5 @@
 import React from 'react';
 import { resumeData } from '../data/resume';
-import BulletPoints from './bulletPoints';
 import ResumeHeader from './resumeHeader';
 import SubHeader from './resumeSubHeader';
 import SmallText from './smallText';
