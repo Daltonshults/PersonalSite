@@ -58,14 +58,21 @@ export const resumeData = {
         "Java",
         "JavaScript",
         "Docker",
-        "C/C++/CUDA/POSIX",
-        "OpenCL/OpenGL",
+        "C",
+        "C++",
+        "CUDA",
+        "POSIX",
+        "OpenCL",
+        "OpenGL",
         "React",
-        "SQL/PostgreSQL",
-        "Git/GitHub",
+        "SQL",
+        "PostgreSQL",
+        "Git",
+        "GitHub",
         "BASH Scripting",
         "Flutter",
-        "Express/Node.JS",
+        "Express",
+        "Node.JS",
         "Django",
         "TensorFlow",
         "Pandas",
@@ -74,5 +81,28 @@ export const resumeData = {
         "Android",
         "iOS",
         "MacOS"
-    ]
+    ],
+    courseWork: [
+        {
+            title: "Cloud Application Development",
+            description: "Applied knowledge in creating cloud applications using Express.js and Node.js. Implemented techniques for storing, managing, replicating, and synchronizing API data while ensuring security through robust authentication and authorization mechanisms. Created RESTful APIs and implemented data representation approaches and error-handling mechanisms."
+        },
+        {
+            title: "Mobile Software Development",
+            description: "Designed and created applications for modern mobile platforms, utilizing emulators for development and testing. Applied responsive design principles for effective user interfaces across screen sizes. Deployed internal mobile storage and integrated cloud services such as Google CloudFront."
+        },
+        {
+            title: "Machine Learning",
+            description: " Gained knowledge in Machine Learning algorithms and AI. Utilized libraries such as Scikit-learn, Pandas, Matplotlib, and TensorFlow. Developed complete Machine Learning pipelines and conducted experiments, presenting findings through graphs generated in Python."
+        },
+        {
+            title: "Introduction to Artificial Intelligence",
+            description: "Studied concepts such as intelligent agents, state-space searches, game theory, and logic and reasoning. Projects included implementing tree-search algorithms, a Bayesian network with Neapolitan’s algorithm, and adversarial search such as the Minimax algorithm."
+        },
+        {
+            title: "Parallel Programming",
+            description: "Developed skills in designing parallel and concurrent programs. Studied CUDA kernels, SIMD programming, and GPU architectures. Gained practical experience with OpenMP, OpenCL, and OpenGL."
+        }
+    ],
+    
 };
