@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Experience from "./experience";
 import LanguagesTechnologies from "./languagesTechnologies";
-import ComponentThree from "./compThree";
+import CourseWork from "./courseWork";
 // TODO: Add text from resume
 const variants = {
   enter: (direction: number) => ({
@@ -131,7 +131,7 @@ const MainBody: React.FC = () => {
             ) : page === 1 ? (
                 <LanguagesTechnologies />
             ) : (
-                <ComponentThree />
+                <CourseWork />
             )}
             </motion.div>
         </AnimatePresence>
