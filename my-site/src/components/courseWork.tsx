@@ -23,7 +23,13 @@ const CourseWork: React.FC = () => {
                     }
                 }
             >
-                <SubHeader>{title}</SubHeader>
+                <SubHeader
+                style={
+                    {
+                        margin: "0px"
+                    }
+                }
+                >{title}</SubHeader>
                 <SmallText>{description}</SmallText>                
             </div>
         )
