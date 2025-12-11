@@ -2,7 +2,7 @@ import React from 'react';
 import BulletPoints from './bulletPoints';
 import SubHeader from './resumeSubHeader';
 import ResumeHeader from './resumeHeader';
-import { resumeData } from '../data/resume';
+import { resumeData } from '../data/resumeText';
 
 const Experience: React.FC = () => {
 
