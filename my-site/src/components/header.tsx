@@ -1,20 +1,13 @@
 import React from "react";
 import { useState } from "react";
+import { titles } from "../data/headerText";
 
 const Header: React.FC = () => {
 
     const [hovered, setHovered] = useState<boolean>(false); 
 
-    const titles: string[] = [ 
-        "Summa Cum Laude", 
-        "Computer Science", 
-        "Dalton Shults",
-        "Undergraduate Researcher", 
-        "Full-Stack Developer"
-    ];
-
     const rowH: number = 55;
-    const REPEATS: number = 3;
+    const REPEATS: number = 4;
 
     return (
         <header
@@ -26,46 +19,49 @@ const Header: React.FC = () => {
                 padding: "10px", 
                 backgroundColor: "#f5f5f5",
                 overflow: "hidden",
-                height: "350px"
+                position: "relative",
+                height: "20rem",
+
             }
         }
         >
             <div style={
                     { 
-                        display: "flex", 
-                        flexDirection: "column", 
-                        alignItems: "flex-start", 
-                        gap: "5", 
-                        whiteSpace: "nowrap"
+                        position: "relative",
+                        left: -100,
+                        top: -350,
+                        whiteSpace: "nowrap",
+                        transform: hovered ? "rotate(0deg)" : "rotate(13deg)",
+                        transition: "transform 0.5s ease",
+                        transformOrigin: "left center",
                     }
                 }
             >
             {
-            Array.from( { length: REPEATS}).map( (_, repeatIndex) =>
+            Array.from( { length: REPEATS}).map( () =>
             titles.map((text, i) => (
                 <div key={i} style=
                 {
                     { 
                         height: rowH, 
                         marginBottom: "5px",
-                        position: "relative", 
-                        overflow: "visible" 
+                        overflow: "visible", 
+                        display: "flex",
+                        alignItems: "center"
+                        
                     }
                 }
                 >
                     <div
                         style={
                             {
-                                position: "absolute",
-                                left: -50,
-                                top: -350,
-                                fontSize: text === "Dalton Shults" ? hovered ? 72 : 56 : 36,
+                                fontSize: text === "Dalton Shults" ? 56 : 36,
                                 fontWeight: "bold",
                                 whiteSpace: "nowrap",
-                                transform: hovered ? "rotate(0deg)" : "rotate(13deg)",
-                                transformOrigin: "left center",
-                                color: hovered ?  text != "Dalton Shults" ? "rgb(150,150, 150)" : "rgb(0, 0, 0)": "rgb(0, 0, 0)",
-                                transition: "color 0.3s ease, transform 0.5s ease, font-size 0.5s ease",
+                                color: hovered ?  "rgb(150,150, 150)" : "rgb(0, 0, 0)",
+                                transition: "color 0.3s ease, font-size 0.5s ease",
+                                justifySelf: "center"
+
                             }
                         }
                     >
@@ -74,6 +70,23 @@ const Header: React.FC = () => {
                 </div>
             )))}
             </div>
+            <div
+                style={
+                    {
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)", 
+                        fontSize: "10rem",
+                        fontWeight: "bold",
+                        zIndex: 999,
+                        pointerEvents: "none",
+                        opacity: hovered ? 1 : 0,
+                        transition: "opacity 0.6s ease",
+                        whiteSpace: "nowrap"
+                    }
+                }
+            >Dalton Shults</div>
         </header>
     );
 };
