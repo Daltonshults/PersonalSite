@@ -4,6 +4,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import Experience from "./experience";
 import LanguagesTechnologies from "./languagesTechnologies";
 import CourseWork from "./courseWork";
+import "./mainBody.css"
+
+
 // TODO: Add text from resume
 const variants = {
   enter: (direction: number) => ({
@@ -38,6 +41,15 @@ const MainBody: React.FC = () => {
     setDirection(1);
     setPage((next) => (next === pages.length - 1 ? 0 : next + 1));
   };
+
+    // const buttonStyle = {
+    //     margin: ".25rem",
+    //     padding: "1.5rem 2.5rem 1.5rem 2.5rem",
+    //     fontSize: "36px",
+    //     borderRadius: "10%",
+    //     color: "rgb(255, 255, 255)",
+    //     backgroundColor: "rgb(2, 64, 11)"
+    // }
 
   type indicatorDotProps = {
     color?: string
@@ -96,6 +108,7 @@ const MainBody: React.FC = () => {
                     flexDirection: "row",
                     alignContent: "center",
                     justifyContent: "center",
+                    margin: "1.5rem"
                 }
             }
         >{dots}</div>
@@ -106,16 +119,13 @@ const MainBody: React.FC = () => {
     <div
         style={
             {
-                minHeight: "2rem"
+                margin: "1rem"
             }
         }
     >
     <div
-        style={{
-            minHeight: "500px"
-        }}
         >
-        <div style={{ position: "relative", overflow: "scroll", height: "50rem" }}>
+        <div style={{ position: "relative", overflow: "scroll", height: "30rem" }}>
         <AnimatePresence mode="wait" custom={direction}>
             <motion.div
             key={page}
@@ -150,23 +160,11 @@ const MainBody: React.FC = () => {
     }
     >
         <button 
-        style={
-            {
-                margin: ".25rem",
-                padding: ".25rem",
-                fontSize: "24px"
-            }
-        }
-        onClick={goPrev}>{"(<"}</button>
+            className="my-button"
+        onClick={goPrev}>{"<"}</button>
         <button 
-        style={
-            {
-                margin: ".25rem",
-                padding: ".25rem",
-                fontSize: "24px"
-            }
-        }
-        onClick={goNext}>{">)"}</button>
+            className="my-button"
+        onClick={goNext}>{">"}</button>
     </div>
     </div>
   );
