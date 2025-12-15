@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     const [hovered, setHovered] = useState<boolean>(false); 
 
     const rowH: number = 55;
-    const REPEATS: number = 4;
+    const REPEATS: number = 3;
 
     return (
         <header
