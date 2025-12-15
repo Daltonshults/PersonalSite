@@ -10,7 +10,11 @@ const SmallText: React.FC<SmallTextProps> = ( { children, style={ fontSize: "24p
     return (
     <div
     style={
-        style
+        {
+            fontSize: "24px",
+            marginBottom: "1rem",
+            ...style
+        }
     }
     >
         {children}
