@@ -13,6 +13,7 @@ const AboutMe: React.FC = () => {
     <div
       style={{
         display: "flex",
+        backgroundColor: "rgba(0, 64, 10, 0.22)",
       }}
     >
       <div
@@ -20,7 +21,6 @@ const AboutMe: React.FC = () => {
           display: "flex",
           flex: "1",
           width: "100%",
-          backgroundColor: "lightgray",
           margin: "5%",
           padding: "1rem",
           justifyContent: "center",
