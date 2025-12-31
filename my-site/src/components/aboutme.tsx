@@ -17,34 +17,56 @@ const AboutMe: React.FC = () => {
       }}
     >
       <div
-        style={{
-          display: "flex",
-          flex: "1",
-          width: "100%",
-          margin: "5%",
-          padding: "1rem",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <img
+      style={{
+        flex: "0 0 25vw",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+
+        <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           style={{
-            borderRadius: "50%",
-            width: "100%",
+            position: "relative",
+            width: "22vw",
+            height: "22vw",
             aspectRatio: "1 / 1",
-            objectFit: "cover",
-            display: "block",
+            borderRadius: "50%",
+            overflow: "hidden",
           }}
-          src={
-            hovered
-              ? "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/108089180721037.650fb50bd637a.png"
-              : "https://i.ytimg.com/vi/C0cALbLd70o/maxresdefault.jpg"
-          }
-          alt=""
-        />
+          >
+          <img
+            src="https://i.ytimg.com/vi/C0cALbLd70o/maxresdefault.jpg"
+            alt=""
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              transition: "opacity 0.6s ease",
+              opacity: hovered ? 0 : 1,
+            }}
+            />
+
+          <img
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/108089180721037.650fb50bd637a.png"
+            alt=""
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              transition: "opacity 0.6s ease",
+              opacity: hovered ? 1 : 0,
+            }}
+            />
+        </div>
       </div>
+
 
       <Parallax 
         bgImage={`${natureImage}`}
