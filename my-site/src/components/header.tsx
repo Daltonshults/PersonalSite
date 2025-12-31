@@ -17,7 +17,7 @@ const Header: React.FC = () => {
             { 
                 textAlign: "center", 
                 padding: "10px", 
-                backgroundColor: "#f5f5f5",
+                backgroundColor: "#3e3d3dff",
                 overflow: "hidden",
                 position: "relative",
                 height: "20rem",
@@ -58,9 +58,10 @@ const Header: React.FC = () => {
                                 fontSize: text === "Dalton Shults" ? 56 : 36,
                                 fontWeight: "bold",
                                 whiteSpace: "nowrap",
-                                color: hovered ?  "rgb(150,150, 150)" : "rgb(0, 0, 0)",
+                                color: hovered ?  "rgba(0, 0, 0, 0.3)"  : "rgba(240, 240, 240, 0.8)",
                                 transition: "color 0.3s ease, font-size 0.5s ease",
-                                justifySelf: "center"
+                                justifySelf: "center",
+
 
                             }
                         }
@@ -83,7 +84,8 @@ const Header: React.FC = () => {
                         pointerEvents: "none",
                         opacity: hovered ? 1 : 0,
                         transition: "opacity 0.6s ease",
-                        whiteSpace: "nowrap"
+                        whiteSpace: "nowrap",
+                        color: "white"
                     }
                 }
             >Dalton Shults</div>
