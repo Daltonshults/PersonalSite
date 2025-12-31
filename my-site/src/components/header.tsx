@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { titles } from "../data/headerText";
+import { titles, name } from "../data/headerText";
 
 const Header: React.FC = () => {
 
@@ -88,7 +88,7 @@ const Header: React.FC = () => {
                         color: "white"
                     }
                 }
-            >Dalton Shults</div>
+            >{name}</div>
         </header>
     );
 };
