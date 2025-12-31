@@ -5,3 +5,5 @@ export const titles: string[] = [
     "Undergraduate Researcher", 
     "Full-Stack Developer"
 ];
+
+export const name: string = "Dalton Shults"
