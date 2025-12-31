@@ -42,15 +42,6 @@ const MainBody: React.FC = () => {
     setPage((next) => (next === pages.length - 1 ? 0 : next + 1));
   };
 
-    // const buttonStyle = {
-    //     margin: ".25rem",
-    //     padding: "1.5rem 2.5rem 1.5rem 2.5rem",
-    //     fontSize: "36px",
-    //     borderRadius: "10%",
-    //     color: "rgb(255, 255, 255)",
-    //     backgroundColor: "rgb(2, 64, 11)"
-    // }
-
   type indicatorDotProps = {
     color?: string
     page: number
@@ -119,13 +110,23 @@ const MainBody: React.FC = () => {
     <div
         style={
             {
-                margin: "1rem"
+                backgroundColor: "rgba(0, 64, 10, 0.22)",
+                padding: "5rem 0rem 4rem 0rem"
+
             }
         }
     >
     <div
         >
-        <div style={{ position: "relative", overflow: "scroll", height: "30rem" }}>
+        <div style={
+            { 
+                position: "relative", 
+                overflow: "scroll", 
+                height: "30rem", 
+                backgroundColor: "rgba(255, 255, 255, 1)",
+                margin: "3rem",
+            }
+        }>
         <AnimatePresence mode="wait" custom={direction}>
             <motion.div
             key={page}
@@ -155,7 +156,7 @@ const MainBody: React.FC = () => {
         {
             display: "flex",
             alignContent: "center",
-            justifyContent: "center"
+            justifyContent: "center",
         }
     }
     >
