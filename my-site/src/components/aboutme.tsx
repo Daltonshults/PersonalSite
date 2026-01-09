@@ -14,6 +14,9 @@ const AboutMe: React.FC = () => {
       style={{
         display: "flex",
         backgroundColor: "rgba(0, 64, 10, 0.22)",
+        margin: "1rem",
+        borderRadius: "8px",
+        overflow: "hidden",
       }}
     >
       <div
@@ -33,7 +36,7 @@ const AboutMe: React.FC = () => {
             width: "22vw",
             height: "22vw",
             aspectRatio: "1 / 1",
-            borderRadius: "50%",
+            borderRadius: "8px",
             overflow: "hidden",
           }}
           >
@@ -76,8 +79,9 @@ const AboutMe: React.FC = () => {
             <div
               style={{
                 position: "absolute",
-                inset: 2, 
+                inset: 0, 
                 backgroundColor: "rgba(128, 128, 128, 0.4)",
+                margin: "0",
               }}
             />
           )}>
