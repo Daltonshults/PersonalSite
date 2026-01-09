@@ -111,8 +111,9 @@ const MainBody: React.FC = () => {
         style={
             {
                 backgroundColor: "rgba(0, 64, 10, 0.22)",
-                padding: "5rem 0rem 4rem 0rem"
-
+                padding: "1rem 5rem 4rem 5rem",
+                margin: "1rem",
+                borderRadius: "8px"
             }
         }
     >
@@ -122,9 +123,10 @@ const MainBody: React.FC = () => {
             { 
                 position: "relative", 
                 overflow: "scroll", 
-                height: "30rem", 
+                height: "40rem", 
                 backgroundColor: "rgba(255, 255, 255, 1)",
-                margin: "3rem",
+                margin: "1rem",
+                borderRadius:  "8px"
             }
         }>
         <AnimatePresence mode="wait" custom={direction}>
