@@ -81,7 +81,6 @@ const AboutMe: React.FC = () => {
                 position: "absolute",
                 inset: 0, 
                 backgroundColor: "rgba(128, 128, 128, 0.4)",
-                margin: "0",
               }}
             />
           )}>
